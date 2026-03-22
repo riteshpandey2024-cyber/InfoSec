@@ -100,7 +100,7 @@ InfoSec/
 
 ---
 
-## 1 · Overview
+### 1 · Overview
 
 <p align="center">
   <img src="assets/overview.png" width="800">
