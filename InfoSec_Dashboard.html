@@ -857,7 +857,85 @@
           },
         });
       }
-
+      
+      function makeScatterChart() {
+        const ctx = document.getElementById("scatterChart");
+        if (!ctx) return;
+        const catColor = {
+          "IP / Data": "#E74C3C",
+          "Critical Infrastructure": "#9B59B6",
+          "Software/Infrastructure": "#F39C12",
+          "Data / Operations": "#C0392B",
+          "Cloud Services/Data": "#2980B9",
+          "User Credentials": "#3498DB",
+          "Data / Applications": "#27AE60",
+          "Network Infrastructure": "#1ABC9C",
+          "Data / Databases": "#16A085",
+          "Data / Financial": "#D35400",
+          "Data / IP": "#8E44AD",
+          "Network / Data": "#2E86AB",
+          "Servers / OS": "#7F8C8D",
+          "Credentials / Data": "#BDC3C7",
+          "User Credentials/Data": "#A8D8EA",
+          "Physical Assets/Data": "#95A5A6",
+        };
+        const pts = riskData.map((d) => ({
+          x: d.score,
+          y: spendingData[d.n] || 1,
+          label: d.n,
+          color: catColor[d.a] || "#7F8C8D",
+        }));
+        new Chart(ctx, {
+          type: "scatter",
+          data: {
+            datasets: [
+              {
+                label: "Threats",
+                data: pts.map((p) => ({ x: p.x, y: p.y })),
+                backgroundColor: pts.map((p) => p.color + "BB"),
+                borderColor: pts.map((p) => p.color),
+                pointRadius: 7,
+                pointHoverRadius: 10,
+                borderWidth: 2,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: (c) =>
+                    `${pts[c.dataIndex].label}  |  Risk: ${c.parsed.x}  |  Spend: $${c.parsed.y}B`,
+                },
+              },
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: "Risk Score",
+                  font: { size: 10, weight: "bold" },
+                  color: "#1F3864",
+                },
+                min: 15,
+                max: 70,
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: "Security Spending ($B)",
+                  font: { size: 10, weight: "bold" },
+                  color: "#1F3864",
+                },
+                min: 0,
+              },
+            },
+          },
+        });
+      }
       
 
 
