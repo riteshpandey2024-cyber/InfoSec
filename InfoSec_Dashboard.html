@@ -6,7 +6,6 @@
     <title>Information Security Threats — Research Dashboard</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
     <style>
-
       /* ── Reset ───────────────────────────────────────────────────────────────── */
       *,
       *::before,
@@ -61,8 +60,7 @@
         flex-shrink: 0;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
       }
-
-
+      
       .tab-btn {
         flex: 1 1 0; /* each button = exactly 1/8 of bar  */
         min-width: 0; /* allow shrink below content width  */
@@ -344,7 +342,6 @@
       .badge.LOW {
         background: #27ae60;
       }
-
     </style>
   </head>
   <body>
@@ -1456,7 +1453,7 @@
         }
       }
 
-      /* ── BOOT ─────────────────────────────────────────────────────────────────── */
+      /* ── BOOT ─────────────────────────────────────────────────────── */
       window.addEventListener("load", () => {
         chartInited["overview"] = true;
         makeBarChart("barChartOverview");
