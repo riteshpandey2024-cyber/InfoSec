@@ -45,6 +45,91 @@
         </button>
       </div>
 
-      
+      <!-- ── PANEL AREA ────────────────────────────────────────────────────────── -->
+      <div class="panel-area">
+        <!-- 1 · OVERVIEW ──────────────────────────────────────────────────────── -->
+        <div id="panel-overview" class="panel active">
+          <div class="kpi-row">
+            <div class="kpi red">
+              <div class="val">4</div>
+              <div class="lbl">Critical Threats</div>
+            </div>
+            <div class="kpi orange">
+              <div class="val">4</div>
+              <div class="lbl">High Threats</div>
+            </div>
+            <div class="kpi">
+              <div class="val">14</div>
+              <div class="lbl">Medium Threats</div>
+            </div>
+            <div class="kpi green">
+              <div class="val">3</div>
+              <div class="lbl">Low Threats</div>
+            </div>
+            <div class="kpi purple">
+              <div class="val">$300B+</div>
+              <div class="lbl">Global Cybersec Spend 2026</div>
+            </div>
+            <div class="kpi">
+              <div class="val">32%</div>
+              <div class="lbl">Phishing Share (2024)</div>
+            </div>
+          </div>
+          <div class="col2">
+            <div class="chart-card">
+              <div class="card-title">
+                Visualization 1 — Threat Risk Ranking
+              </div>
+              <div class="card-sub">
+                Top 25 threats sorted by Risk Score | Source: NIST SP 800-30,
+                ENISA 2023
+              </div>
+              <div class="chart-wrap">
+                <canvas id="barChartOverview"></canvas>
+              </div>
+              <div class="insight">
+                <strong>Insight:</strong> APTs, Zero-Day Exploits, Supply Chain
+                Attacks, and Ransomware form a Critical tier (scores 56–61),
+                driven by low control mitigation effectiveness and high
+                uncertainty. Phishing ranks 5th despite being the most frequent
+                attack, as its higher mitigation rate (55%) reduces its score.
+                The gap between Critical and High threats highlights where
+                maximum investment is warranted.
+              </div>
+              <p class="source-note">
+                Sources: NIST SP 800-30, ENISA Threat Landscape 2023, Gartner
+                Security Reports 2023
+              </p>
+            </div>
+            <div class="chart-card">
+              <div class="card-title">
+                Visualization 3 — Attack Distribution (2024)
+              </div>
+              <div class="card-sub">
+                Proportion of all incidents by attack type in 2024 | Source:
+                CrowdStrike 2024, ENISA 2023
+              </div>
+              <div class="chart-wrap">
+                <canvas id="pieChartOverview"></canvas>
+              </div>
+              <div class="insight">
+                <strong>Insight:</strong> Phishing dominates at 32% of all
+                incidents, with Ransomware (14%) and General Malware (9%)
+                completing the top three — together accounting for 55% of
+                incidents. High-impact but lower-frequency threats like APT (4%)
+                and Zero-Day (3%) represent the 'iceberg' portion that drives
+                disproportionate security investment.
+              </div>
+              <p class="source-note">
+                Sources: CrowdStrike Global Threat Report 2024, ENISA Threat
+                Landscape 2023
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+
+
   </body>
 </html>
