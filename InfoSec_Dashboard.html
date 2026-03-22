@@ -798,6 +798,66 @@
         });
       }
 
+      function makeLineChart() {
+        const ctx = document.getElementById("lineChart");
+        if (!ctx) return;
+        const highlight = new Set([
+          "Phishing/Social Eng.",
+          "Ransomware",
+          "Supply Chain",
+          "Cloud Attacks",
+        ]);
+        new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: years,
+            datasets: attackTypes.map((t, i) => ({
+              label: t,
+              data: trendData[t],
+              borderColor: lineColors[i],
+              backgroundColor: lineColors[i] + "20",
+              tension: 0.35,
+              borderWidth: highlight.has(t) ? 2.8 : 1.3,
+              borderDash: highlight.has(t) ? [] : [5, 4],
+              pointRadius: 3,
+              fill: false,
+              order: highlight.has(t) ? 0 : 1,
+            })),
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: { font: { size: 8 }, boxWidth: 11, padding: 7 },
+              },
+              tooltip: { mode: "index", intersect: false },
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: "Year",
+                  font: { size: 10, weight: "bold" },
+                  color: "#1F3864",
+                },
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: "% of Reported Incidents",
+                  font: { size: 10, weight: "bold" },
+                  color: "#1F3864",
+                },
+                min: 0,
+                max: 40,
+              },
+            },
+          },
+        });
+      }
+
 
 
 
