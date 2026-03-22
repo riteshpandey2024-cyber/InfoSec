@@ -13,7 +13,7 @@ scored, ranked, visualized, and documented across six professional output format
 [![matplotlib](https://img.shields.io/badge/matplotlib-3.10-11557c?style=flat-square)](https://matplotlib.org/)
 [![openpyxl](https://img.shields.io/badge/openpyxl-3.1-217346?style=flat-square)](https://openpyxl.readthedocs.io/)
 [![docx.js](https://img.shields.io/badge/docx.js-9.x-2B579A?style=flat-square)](https://docx.js.org/)
-[![License](https://img.shields.io/badge/License-Academic%20Use-lightgrey?style=flat-square)](#license)
+
 
 </div>
 
