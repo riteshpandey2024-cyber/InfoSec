@@ -128,6 +128,32 @@
           </div>
         </div>
 
+        <!-- 2 · RISK RANKING ──────────────────────────────────────────────────── -->
+        <div id="panel-risk" class="panel">
+          <div class="chart-card">
+            <div class="card-title">
+              Visualization 1 — Full Threat Risk Ranking (Bar Chart)
+            </div>
+            <div class="card-sub">
+              Risk = (Likelihood × Asset Value × (1 − Control Mitigation%)) +
+              Uncertainty | All 25 threats ranked
+            </div>
+            <div class="chart-wrap"><canvas id="barChartFull"></canvas></div>
+            <div class="insight">
+              <strong>Key Finding:</strong> APTs, Zero-Day Exploits, Supply
+              Chain Attacks, and Ransomware form a Critical tier (scores 56–61),
+              driven by extremely low control mitigation rates (20–40%) and high
+              uncertainty scores (8–9). Phishing ranks 5th despite being the
+              most frequent attack — its higher mitigation rate (55%)
+              significantly reduces its composite score.
+            </div>
+            <p class="source-note">
+              Risk Formula: Risk = (L × V × (1−CM)) + U | Sources: NIST SP
+              800-30 Rev.1, ENISA Threat Landscape 2023, Gartner 2023
+            </p>
+          </div>
+        </div>
+
         
 
 
