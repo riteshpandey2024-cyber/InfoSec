@@ -447,21 +447,22 @@ The Operational/Infrastructure category holds 4 of the top 8 risk positions and 
 ---
 
 ## License
-```
+
 Released for **academic and research use**. Data synthesized from publicly available industry reports. All referenced report titles, frameworks, and trademarks remain the property of their respective owners.
 
 ---
 
 <div align="center">
 
+
 **Python 3.12 · Node.js 22 · matplotlib 3.10 · numpy 2.4 · openpyxl 3.1 · docx.js 9.x**
 
 
 
 </div>
-```
 
-## Creator 
-```
-- Ritesh Pandey
-```
+---
+
+## Creator
+
+**Ritesh Pandey**
