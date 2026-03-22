@@ -438,7 +438,7 @@ Released for **academic and research use**. Data synthesized from publicly avail
 
 **Python 3.12 · Node.js 22 · matplotlib 3.10 · numpy 2.4 · openpyxl 3.1 · docx.js 9.x**
 
-*25 threats · 5 domains · 8 visualizations · 12 defenses · 150 trend data points · $161.7B spending mapped · 12 sources*
+
 
 </div>
 
