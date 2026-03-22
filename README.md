@@ -48,6 +48,7 @@ This project generates a **complete, publication-ready information security rese
 - [Key Findings](#-key-findings)
 - [References & Sources](#-references--sources)
 - [License](#-license)
+- [Creator](#-creator)
 
 ---
 
@@ -62,18 +63,7 @@ pip install matplotlib numpy openpyxl
 # Node.js dependency
 npm install -g docx
 
-# Requires Python ≥ 3.10  and  Node.js ≥ 16
-```
 
-### Run in Order
-
-```bash
-# Step 1 — Generate all charts + Excel dataset + ranked_data.json
-python generate_charts_and_excel.py
-
-# Step 2 — Generate Word report  (reads charts from ./charts/)
-node create_report.js
-```
 
 
 
