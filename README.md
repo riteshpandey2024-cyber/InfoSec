@@ -47,9 +47,8 @@ This project generates a **complete, publication-ready information security rese
 
 - [Key Findings](#-key-findings)
 - [References & Sources](#-references--sources)
-- [License](#-license)
-- [Creator](#-creator)
-
+- [License](#license)
+- [Creator](#creator)
 ---
 
 ## ⚡ Quick Start
