@@ -245,7 +245,7 @@
             </p>
           </div>
         </div>
-        
+
         <!-- 6 · STACKED TRENDS ─────────────────────────────────────────────────── -->
         <div id="panel-stacked" class="panel">
           <div class="chart-card">
@@ -345,7 +345,7 @@
     </div>
     <!-- end .shell -->
 
-     <!-- ═══ SCRIPTS ════════════════════════════════════════════════════════════ -->
+    <!-- ═══ SCRIPTS ════════════════════════════════════════════════════════════ -->
     <script>
       /* ── TAB SWITCHER ─────────────────────────────────────────────────────────── */
       const chartInited = {};
@@ -703,7 +703,7 @@
         "#FFB703",
         "#B5838D",
       ];
-      
+
       const levelColors = {
         CRITICAL: "#FF4444",
         HIGH: "#FF8C00",
@@ -714,6 +714,7 @@
       const pie2024 = attackTypes.map((t) =>
         trendData[t] ? trendData[t][9] : 0,
       );
+
 
       /* ── CHART BUILDERS ───────────────────────────────────────────────────────── */
       function makeBarChart(id) {
@@ -857,7 +858,7 @@
           },
         });
       }
-      
+
       function makeScatterChart() {
         const ctx = document.getElementById("scatterChart");
         if (!ctx) return;
@@ -986,7 +987,22 @@
         });
       }
 
-      const matrix = [
+      function makeHeatmap() {
+        const defenses = [
+          "MFA",
+          "EDR/XDR",
+          "WAF",
+          "SIEM",
+          "Network Seg.",
+          "Patch Mgmt",
+          "DLP",
+          "Zero Trust",
+          "Pen Testing",
+          "Awareness",
+          "CSPM",
+          "Vendor Risk",
+        ];
+        const matrix = [
           [3, 2, 0, 3, 1, 1, 1, 3, 1, 2, 0, 0],
           [0, 1, 2, 2, 1, 3, 0, 1, 3, 0, 0, 0],
           [0, 1, 1, 2, 1, 2, 0, 2, 2, 0, 0, 3],
@@ -1018,8 +1034,7 @@
         const txtC = ["#555", "#333", "#fff", "#fff"];
         const names = riskData.map((d) => d.n);
         let html = `<table style="border-collapse:collapse;font-size:.73rem;width:100%;min-width:760px">
-        
-      <thead><tr>
+    <thead><tr>
       <th style="background:#1F3864;color:#fff;padding:7px 10px;text-align:left;white-space:nowrap;min-width:155px">Threat</th>
       ${defenses.map((d) => `<th style="background:#1F3864;color:#fff;padding:4px 3px;text-align:center;writing-mode:vertical-rl;transform:rotate(180deg);height:82px;font-size:.68rem;min-width:50px">${d}</th>`).join("")}
     </tr></thead><tbody>`;
@@ -1100,12 +1115,12 @@
         }
       }
 
-
-
-  
-
+      /* ── BOOT ─────────────────────────────────────────────────────────────────── */
+      window.addEventListener("load", () => {
+        chartInited["overview"] = true;
+        makeBarChart("barChartOverview");
+        makePieChart("pieChartOverview");
+      });
     </script>
-
-
   </body>
 </html>
