@@ -116,6 +116,14 @@ InfoSec/
   <img src="assets/overview.png" width="800">
 </p>
 <br>  
+<p align="center">
+  <img src="assets/overview1.png" width="800">
+</p>
+<br>  
+<p align="center">
+  <img src="assets/overview2.png" width="800">
+</p>
+<br>  
 
 The **Overview** screen is the entry point to the dashboard — a summary panel that simultaneously shows the four most important visualizations: Risk Ranking, Attack Trends, 2024 Distribution, and the Risk vs Spending scatter. At a glance, a reader can see which threats score Critical, how the incident landscape has shifted across a decade, what share of 2024 attacks comes from each category, and whether spending aligns with risk. This panel is designed to work as a self-contained project poster — every key conclusion is visible without navigating to another screen.
 
@@ -125,6 +133,10 @@ The **Overview** screen is the entry point to the dashboard — a summary panel 
 
 <p align="center">
   <img src="assets/risk_ranking.png" width="800">
+</p>
+<br>  
+<p align="center">
+  <img src="assets/risk_ranking1.png" width="800">
 </p>
 <br>  
 
@@ -138,6 +150,10 @@ The **Risk Ranking** chart is a horizontal bar chart that ranks all 25 identifie
   <img src="assets/attack_trends.png" width="800">
 </p>
 <br>  
+<p align="center">
+  <img src="assets/attack_trends1.png" width="800">
+</p>
+<br>  
 
 The **Attack Trends** line graph tracks the percentage of all reported incidents attributed to 15 major attack categories every year from 2015 to 2024. Four high-growth categories — Phishing/Social Engineering, Ransomware, Supply Chain Attacks, and Cloud Security Incidents — are rendered as solid bold lines; the remaining 11 appear as lighter dashed series. The most striking patterns are: Phishing growing from 22% to a sustained 34–36% peak, making it the single dominant category for six consecutive years; Ransomware surging from 4% in 2015 to 14% in 2021 before a modest decline; and both Supply Chain and Cloud Incidents rising from 1% to 7–8% — the steepest proportional growth trajectories of any category. Meanwhile, conventional Malware (excl. Ransomware) falls steadily from 18% to 7%, reflecting a rational shift by the attacker community toward higher-return tactics rather than any improvement in defenses.
 
@@ -147,6 +163,10 @@ The **Attack Trends** line graph tracks the percentage of all reported incidents
 
 <p align="center">
   <img src="assets/distribution.png" width="800">
+</p>
+<br>   
+<p align="center">
+  <img src="assets/distribution1.png" width="800">
 </p>
 <br>   
 
@@ -160,6 +180,10 @@ The **Distribution** doughnut chart shows the exact percentage share of all repo
   <img src="assets/risk_vs_spending.png" width="800">
 </p>
 <br>   
+<p align="center">
+  <img src="assets/risk_vs_spending1.png" width="800">
+</p>
+<br>  
 
 
 The **Risk vs Spending** scatter plot maps each of the 25 threats on two axes: computed risk score (x-axis) and estimated global security spending in billions USD (y-axis). Each point is colored by threat category and every threat is individually labeled. A first-degree polynomial trendline confirms the expected positive correlation: higher-risk threats generally attract larger defensive investment. The most analytically interesting points are the outliers that deviate from the trend. Ransomware sits far above the trendline ($20B spending at a risk score of 49.8) because its operational disruption impact — shutting down fuel pipelines and hospital systems — drives emergency spending beyond what the composite risk score captures. APT and Supply Chain Attack both cluster in the upper-right quadrant, confirming that the highest-risk threats also receive the highest sustained investment.
@@ -170,6 +194,10 @@ The **Risk vs Spending** scatter plot maps each of the 25 threats on two axes: c
 
 <p align="center">
   <img src="assets/stacked_trends.png" width="800">
+</p>
+<br>   
+<p align="center">
+  <img src="assets/stacked_trend1.png" width="800"> 
 </p>
 <br>   
 
