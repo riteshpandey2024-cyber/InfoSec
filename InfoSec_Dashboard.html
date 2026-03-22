@@ -1018,8 +1018,87 @@
         const txtC = ["#555", "#333", "#fff", "#fff"];
         const names = riskData.map((d) => d.n);
         let html = `<table style="border-collapse:collapse;font-size:.73rem;width:100%;min-width:760px">
-      
+        
+      <thead><tr>
+      <th style="background:#1F3864;color:#fff;padding:7px 10px;text-align:left;white-space:nowrap;min-width:155px">Threat</th>
+      ${defenses.map((d) => `<th style="background:#1F3864;color:#fff;padding:4px 3px;text-align:center;writing-mode:vertical-rl;transform:rotate(180deg);height:82px;font-size:.68rem;min-width:50px">${d}</th>`).join("")}
+    </tr></thead><tbody>`;
+        matrix.forEach((row, ri) => {
+          const rb = ri % 2 === 0 ? "#fff" : "#F5F8FC";
+          html += `<tr><td style="padding:5px 10px;font-weight:600;background:${rb};white-space:nowrap">${names[ri]}</td>`;
+          row.forEach((v) => {
+            html += `<td style="background:${bg[v]};text-align:center;padding:6px 3px;border:1px solid #E8EEF5;color:${txtC[v]};font-weight:700;font-size:.68rem">${lbl[v]}</td>`;
+          });
+          html += "</tr>";
+        });
+        html += `</tbody></table>
+  <div style="margin-top:10px;display:flex;gap:16px;flex-wrap:wrap;font-size:.77rem">
+    ${lbl
+      .map(
+        (l, i) => `<span style="display:flex;align-items:center;gap:4px">
+      <span style="display:inline-block;width:14px;height:14px;background:${bg[i]};border:1px solid #ccc;border-radius:2px"></span>${l}
+    </span>`,
+      )
+      .join("")}
+  </div>`;
+        document.getElementById("heatmapContainer").innerHTML = html;
+      }
 
+      function makeFullTable() {
+        const tbody = document.getElementById("fullTableBody");
+        riskData.forEach((d, i) => {
+          tbody.innerHTML += `<tr>
+      <td>${i + 1}</td>
+      <td>${d.n}</td>
+      <td style="font-size:.72rem;color:#555">${d.a}</td>
+      <td>${d.L}</td><td>${d.V}</td><td>${d.CM}%</td><td>${d.U}</td>
+      <td><strong style="color:${levelColors[d.level]}">${d.score}</strong></td>
+      <td><span class="badge ${d.level}">${d.level}</span></td>
+    </tr>`;
+        });
+      }
+
+      function makePieTable() {
+        const tbody = document.getElementById("pieTableBody");
+        attackTypes
+          .map((t, i) => ({ t, v: pie2024[i] }))
+          .sort((a, b) => b.v - a.v)
+          .forEach((item) => {
+            tbody.innerHTML += `<tr><td>${item.t}</td><td>${item.v}%</td></tr>`;
+          });
+      }
+
+      /* ── LAZY INIT ────────────────────────────────────────────────────────────── */
+      function initChart(id) {
+        switch (id) {
+          case "overview":
+            makeBarChart("barChartOverview");
+            makePieChart("pieChartOverview");
+            break;
+          case "risk":
+            makeBarChart("barChartFull");
+            break;
+          case "trends":
+            makeLineChart();
+            break;
+          case "distribution":
+            makePieChart("pieChartFull");
+            makePieTable();
+            break;
+          case "spending":
+            makeScatterChart();
+            break;
+          case "stacked":
+            makeStackedChart();
+            break;
+          case "heatmap":
+            makeHeatmap();
+            break;
+          case "table":
+            makeFullTable();
+            break;
+        }
+      }
 
 
 
