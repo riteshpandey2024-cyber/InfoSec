@@ -23,22 +23,7 @@ scored, ranked, visualized, and documented across six professional output format
 
 This project generates a **complete, publication-ready information security research package** from two source scripts — no manual editing, no external data entry. Every table, chart, score, and paragraph is produced programmatically from a single master dataset.
 
-Running two commands produces all of the following:
 
-| Output | Description | Size |
-|--------|-------------|------|
-| `InfoSec_Survey_Report.docx` | 7-page survey report with embedded charts, color-coded tables, headers/footers, and 12 citations | 1.0 MB |
-| `InfoSec_Threats_Dataset.xlsx` | 4-sheet structured dataset — raw source of all tables and graphs | 18 KB |
-| `charts/chart1_risk_ranking.png` | Horizontal bar — 25 threats ranked by risk score | 166 KB |
-| `charts/chart2_trends.png` | Multi-line — 15 attack types tracked across 2015–2024 | 230 KB |
-| `charts/chart3_pie.png` | Doughnut — 2024 incident share by attack category | 231 KB |
-| `charts/chart4_scatter.png` | Scatter — risk score vs. security spending per threat | 189 KB |
-| `charts/chart5_stacked.png` | Stacked bar — year-by-year compositional shift 2015–2024 | 130 KB |
-| `charts/chart6_heatmap.png` | Heatmap — 25 threats × 12 defense mechanisms | 197 KB |
-| `InfoSec_Dashboard.html` | Self-contained interactive browser dashboard | 30 KB |
-| `ranked_data.json` | Machine-readable risk scores for all 25 threats | structured |
-
----
 
 ## Table of Contents
 
@@ -59,8 +44,7 @@ Running two commands produces all of the following:
 - [Security Spending by Category](#-security-spending-by-category)
 - [Attack Trend Analysis 2015–2024](#-attack-trend-analysis-20152024)
 - [Defense Mechanism Analysis](#-defense-mechanism-analysis)
-- [Code Architecture](#-code-architecture)
-- [Dataset Schema](#-dataset-schema)
+
 - [Key Findings](#-key-findings)
 - [References & Sources](#-references--sources)
 - [License](#-license)
@@ -91,24 +75,7 @@ python generate_charts_and_excel.py
 node create_report.js
 ```
 
-**Step 1 terminal output:**
-```
-Chart 1 saved
-Chart 2 saved
-Chart 3 saved
-Chart 4 saved
-Chart 5 saved
-Chart 6 saved
-Excel saved
-All done
-```
 
-**Step 2 terminal output:**
-```
-Word document saved: InfoSec_Survey_Report.docx
-```
-
-> ⚠️ Always run Step 1 before Step 2. The Word report reads the PNG files produced in Step 1 and embeds them directly via `ImageRun`. If charts are missing, report sections render blank.
 
 ---
 
@@ -117,14 +84,7 @@ Word document saved: InfoSec_Survey_Report.docx
 ```
 InfoSec/
 │
-├── charts/                         # Auto-generated PNG charts (created by Step 1)
-│   ├── chart1_risk_ranking.png
-│   ├── chart2_trends.png
-│   ├── chart3_pie.png
-│   ├── chart4_scatter.png
-│   ├── chart5_stacked.png
-│   └── chart6_heatmap.png
-│
+
 ├── assets/                         # Place your own screenshots here
 │   ├── overview.png
 │   ├── risk_ranking.png
@@ -435,108 +395,6 @@ Computed from the 25×12 effectiveness matrix in `chart6_heatmap()`. Scores aver
 
 ---
 
-## 🏗️ Code Architecture
-
-### `generate_charts_and_excel.py` — Python · 642 lines
-
-```
-generate_charts_and_excel.py
-│
-├── MASTER DATA
-│   ├── THREATS[]           25 tuples · (name, cat, desc, example, asset, L, V, CM, U, spending_B)
-│   ├── risk_score(L,V,CM,U)  →  round(L*V*(1-CM/100)+U, 2)
-│   ├── threats_with_score[]  →  THREATS extended with score at [9], spending at [10]
-│   ├── threats_ranked[]      →  sorted by score descending
-│   ├── YEARS[]               [2015, 2016, ..., 2024]
-│   ├── ATTACK_TYPES[]        15 string labels
-│   └── TREND_DATA{}          dict[str → list[int, ×10]]  · incident % per year
-│
-├── CHART FUNCTIONS
-│   ├── chart1_risk_ranking()    barh  · 25 bars · color-coded by tier · 150 dpi
-│   ├── chart2_trends()          line  · 15 series · highlight=4 · 150 dpi
-│   ├── chart3_pie()             doughnut · 15 slices · 2024 values · 150 dpi
-│   ├── chart4_scatter()         scatter · 25 points · np.polyfit trendline · 150 dpi
-│   ├── chart5_stacked()         stacked bar · 15 segments · 10 years · 150 dpi
-│   └── chart6_heatmap()         imshow(RdYlGn) · 25×12 matrix · colorbar · 150 dpi
-│
-└── make_excel()
-    ├── Sheet "1 - Threat Identification"     25 rows · 6 cols · row height 48
-    ├── Sheet "2 - Risk Evaluation"           25 rows · 9 cols · color-coded risk cells
-    ├── Sheet "3 - Spending & Defense"        25 rows · 5 cols · $B currency format
-    └── Sheet "4 - Attack Trends 2015-2024"   15 rows · 12 cols · trend direction column
-```
-
-### `create_report.js` — Node.js · 657 lines
-
-```
-create_report.js
-│
-├── STYLE HELPERS
-│   ├── run() · hRun()           TextRun factories · font:Arial
-│   ├── hdrCell() · dataCell() · colorCell()   TableCell builders
-│   ├── bodyPara() · sectionTitle() · subTitle()  Paragraph builders
-│   ├── infoBox(lines, bg)       1-column highlighted info block
-│   └── chartImage(file, w, h)   ImageRun · reads PNG from ./charts/
-│
-├── TABLE BUILDERS
-│   ├── makeTable1()   Threat Identification · 6 cols · 9350 DXA
-│   ├── makeTable2()   Risk Evaluation       · 9 cols · 8950 DXA · color-coded
-│   ├── makeTable3()   Spending & Defense    · 5 cols · 9350 DXA
-│   └── makeTable4()   Attack Trends         · 12 cols · 8900 DXA
-│
-└── DOCUMENT ASSEMBLY  (US Letter · 12240×15840 DXA · 0.75" margins)
-    ├── Cover Page · Executive Summary · Sections 1–5 · References
-    └── Section 5 embeds all 6 charts via chartImage() + infoBox(interpretation)
-```
-
----
-
-## 🗃️ Dataset Schema
-
-### Python THREATS tuple — 10 fields, index 0–9
-
-```python
-(
-    name,         # [0]  str   Threat name
-    category,     # [1]  str   "Social Engineering" | "Malware" | "Network Attack" |
-                  #             "Application Attack"  | "Operational/Infra"
-    description,  # [2]  str   One-sentence technical definition
-    example,      # [3]  str   "YYYY Incident — impact summary"
-    asset,        # [4]  str   Primary targeted asset class
-    L,            # [5]  int   Likelihood 1–10
-    V,            # [6]  int   Asset Value 1–10
-    CM,           # [7]  int   Control Mitigation 0–100 (%)
-    U,            # [8]  int   Uncertainty 1–10
-    spending_B    # [9]  float Global defense spending estimate ($B USD)
-)
-```
-
-### `ranked_data.json` — sample entry
-
-```json
-{
-  "rank": 1,
-  "name": "Zero-Day Exploit",
-  "cat": "Application Attack",
-  "asset": "Applications/Systems",
-  "L": 6,
-  "V": 10,
-  "CM": 20,
-  "U": 10,
-  "score": 58.0
-}
-```
-
-### Excel sheets at a glance
-
-| Sheet | Rows | Cols | Notable Feature |
-|-------|------|------|----------------|
-| `1 - Threat Identification` | 25 | 6 | Row height 48 · alternating fill |
-| `2 - Risk Evaluation` | 25 | 9 | Score column colored by risk tier |
-| `3 - Spending & Defense` | 25 | 5 | Spending column formatted `#,##0.0` |
-| `4 - Attack Trends 2015-2024` | 15 | 12 | Trend column green/red bold text |
-
----
 
 ## 🔍 Key Findings
 
@@ -594,3 +452,5 @@ Released for **academic and research use**. Data synthesized from publicly avail
 *25 threats · 5 domains · 8 visualizations · 12 defenses · 150 trend data points · $161.7B spending mapped · 12 sources*
 
 </div>
+
+## Developer - Ritesh Pandey
