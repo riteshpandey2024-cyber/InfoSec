@@ -447,7 +447,7 @@ The Operational/Infrastructure category holds 4 of the top 8 risk positions and 
 ---
 
 ## License
-
+```
 Released for **academic and research use**. Data synthesized from publicly available industry reports. All referenced report titles, frameworks, and trademarks remain the property of their respective owners.
 
 ---
@@ -459,5 +459,9 @@ Released for **academic and research use**. Data synthesized from publicly avail
 
 
 </div>
+```
 
-## Creator - Ritesh Pandey
+## Creator 
+```
+- Ritesh Pandey
+```
