@@ -300,6 +300,51 @@
           </div>
         </div>
 
+        <!-- 8 · FULL DATA TABLE ─────────────────────────────────────────────────── -->
+        <div id="panel-table" class="panel">
+          <div class="chart-card">
+            <div class="card-title">
+              Full Risk Evaluation Data — All 25 Threats
+            </div>
+            <div class="card-sub">
+              Complete dataset with all scoring parameters | Sorted by Risk
+              Score (High to Low)
+            </div>
+            <div class="tbl-wrap">
+              <table class="dt">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th style="text-align: left">Threat</th>
+                    <th>Target Asset</th>
+                    <th>L</th>
+                    <th>V</th>
+                    <th>CM%</th>
+                    <th>U</th>
+                    <th>Risk Score</th>
+                    <th>Level</th>
+                  </tr>
+                </thead>
+                <tbody id="fullTableBody"></tbody>
+              </table>
+            </div>
+            <div class="insight">
+              <strong>Formula:</strong> Risk Score = (Likelihood × Asset Value ×
+              (1 − Control Mitigation%)) + Uncertainty. All parameters scored
+              1–10; CM% = approximate effectiveness of industry-standard
+              defenses.
+            </div>
+            <p class="source-note">
+              Sources: NIST SP 800-30, ENISA 2023, Verizon DBIR 2023, IBM
+              X-Force 2023
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end .panel-area -->
+    </div>
+    <!-- end .shell -->
+
 
   </body>
 </html>
