@@ -715,6 +715,60 @@
         trendData[t] ? trendData[t][9] : 0,
       );
 
+      /* ── CHART BUILDERS ───────────────────────────────────────────────────────── */
+      function makeBarChart(id) {
+        const ctx = document.getElementById(id);
+        if (!ctx) return;
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: riskData.map((d) => d.n),
+            datasets: [
+              {
+                label: "Risk Score",
+                data: riskData.map((d) => d.score),
+                backgroundColor: riskData.map(
+                  (d) => levelColors[d.level] + "CC",
+                ),
+                borderColor: riskData.map((d) => levelColors[d.level]),
+                borderWidth: 1.5,
+                borderRadius: 4,
+              },
+            ],
+          },
+          options: {
+            indexAxis: "y",
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: (c) =>
+                    ` Risk: ${c.parsed.x} (${riskData[c.dataIndex].level})`,
+                },
+              },
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: "Risk Score",
+                  font: { size: 10, weight: "bold" },
+                  color: "#1F3864",
+                },
+                min: 0,
+                max: 70,
+              },
+              y: { ticks: { font: { size: 8.5 } } },
+            },
+          },
+        });
+      }
+
+      
+
+
   
 
     </script>
