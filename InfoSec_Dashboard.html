@@ -936,6 +936,55 @@
           },
         });
       }
+
+      function makeStackedChart() {
+        const ctx = document.getElementById("stackedChart");
+        if (!ctx) return;
+        const keys = Object.keys(trendData);
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: years,
+            datasets: keys.map((t, i) => ({
+              label: t,
+              data: trendData[t],
+              backgroundColor: lineColors[i % lineColors.length],
+              borderWidth: 0,
+            })),
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: { font: { size: 8 }, boxWidth: 11, padding: 7 },
+              },
+            },
+            scales: {
+              x: {
+                stacked: true,
+                title: {
+                  display: true,
+                  text: "Year",
+                  font: { size: 10, weight: "bold" },
+                  color: "#1F3864",
+                },
+              },
+              y: {
+                stacked: true,
+                title: {
+                  display: true,
+                  text: "% of All Incidents",
+                  font: { size: 10, weight: "bold" },
+                  color: "#1F3864",
+                },
+                max: 110,
+              },
+            },
+          },
+        });
+      }
       
 
 
