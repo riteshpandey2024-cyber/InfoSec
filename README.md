@@ -85,7 +85,7 @@ node create_report.js
 InfoSec/
 │
 
-├── assets/                         # Place your own screenshots here
+├── assets/                       
 │   ├── overview.png
 │   ├── risk_ranking.png
 │   ├── attack_trends.png
@@ -184,6 +184,10 @@ The **Stacked Trends** chart visualizes the same 10-year, 15-category data as th
   <img src="assets/defense_heatmap.png" width="800">
 </p>
 <br>   
+<p align="center">
+  <img src="assets/defense_heatmap1.png" width="800">
+</p>
+<br> 
 
 
 The **Defense Heatmap** is a 25×12 matrix that maps every ranked threat (rows, ordered by risk score from highest at top) against 12 primary defense mechanisms (columns). Cell values are scored 0–4: None, Low, Medium, High, and Very High effectiveness. The most important structural observation is that the top rows — Zero-Day Exploit, APT, Supply Chain Attack — are dominated by low-effectiveness cells, confirming that current defenses are weakest against the highest-risk threats. Conversely, SIEM/Monitoring and Zero-Trust Architecture are the two most consistently effective columns, averaging 2.84/4.0 and 2.64/4.0 respectively — the only controls that provide at least Medium protection across virtually every threat category. Specialist controls like API Security and Vendor Risk Management score low overall but are essential for their specific threat vectors. The heatmap operationalizes the defense-in-depth principle: no single column is uniformly green, so no single investment is sufficient.
@@ -194,6 +198,10 @@ The **Defense Heatmap** is a 25×12 matrix that maps every ranked threat (rows, 
 
 <p align="center">
   <img src="assets/full_data_table.png" width="800">
+</p>
+<br>   
+<p align="center">
+  <img src="assets/full_data_table1.png" width="800">
 </p>
 <br>   
 
