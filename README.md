@@ -382,26 +382,7 @@ Data Exposure / Misconfiguration     3%    4%    5%    5%    5%    6%    6%    6
 
 ---
 
-## 🛡️ Defense Mechanism Analysis
 
-Computed from the 25×12 effectiveness matrix in `chart6_heatmap()`. Scores averaged across all 25 threats (max = 4.0):
-
-| Rank | Defense Mechanism | Avg Score | Best Against |
-|------|-------------------|-----------|-------------|
-| 1 | SIEM / Monitoring | **2.84** | Broadest coverage — effective across all 5 categories |
-| 2 | Zero-Trust Architecture | **2.64** | APT, Insider Threats, Phishing, Ransomware |
-| 3 | Security Awareness Training | **2.48** | All social engineering · Insider Threats |
-| 4 | MFA / Access Control | **2.44** | Phishing, Brute Force, Credential Theft, Vishing |
-| 5 | Network Firewall | **2.12** | DDoS, Network Attacks, Worms |
-| 5 | Patch Management | **2.12** | Worms, Supply Chain, Ransomware, Rootkit |
-| 7 | EDR / Anti-malware | **2.08** | Ransomware, Spyware, Trojans, Rootkits |
-| 8 | DLP | **1.96** | Insider Threats, Phishing data exfil, Spyware |
-| 9 | Email Filtering | **1.84** | Phishing, Spear Phishing, Vishing |
-| 10 | Backup & Recovery | **1.40** | Ransomware (specialized — low elsewhere) |
-| 11 | API Security | **1.20** | API Abuse, SQL Injection, XSS |
-| 12 | Vendor Risk Management | **1.08** | Supply Chain Attack only |
-
----
 
 
 ## 🔍 Key Findings
