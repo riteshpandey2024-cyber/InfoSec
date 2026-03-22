@@ -766,7 +766,39 @@
         });
       }
 
-      
+      function makePieChart(id) {
+        const ctx = document.getElementById(id);
+        if (!ctx) return;
+        new Chart(ctx, {
+          type: "doughnut",
+          data: {
+            labels: attackTypes,
+            datasets: [
+              {
+                data: pie2024,
+                backgroundColor: lineColors,
+                borderWidth: 2,
+                hoverOffset: 10,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: "right",
+                labels: { font: { size: 8.5 }, boxWidth: 11, padding: 5 },
+              },
+              tooltip: {
+                callbacks: { label: (c) => ` ${c.label}: ${c.parsed}%` },
+              },
+            },
+          },
+        });
+      }
+
+
 
 
   
