@@ -284,17 +284,17 @@ Each domain contains exactly **5 threats**, ensuring balanced analytical coverag
 ```
 25 Threats · 5 Categories · 5 Threats Each
 │
-├── 🎭  Social Engineering    Phishing · Spear Phishing · Vishing · Baiting · Pretexting
+├── Social Engineering    Phishing · Spear Phishing · Vishing · Baiting · Pretexting
 │
-├── 🦠  Malware               Ransomware · Spyware · Rootkit · Trojan Horse · Worm
+├── Malware               Ransomware · Spyware · Rootkit · Trojan Horse · Worm
 │
-├── 🌐  Network Attacks       DDoS · Man-in-the-Middle · DNS Spoofing · Packet Sniffing
+├── Network Attacks       DDoS · Man-in-the-Middle · DNS Spoofing · Packet Sniffing
 │                             · Session Hijacking
 │
-├── 💻  Application Attacks   SQL Injection · XSS · Zero-Day Exploit · Brute Force Attack
+├── Application Attacks   SQL Injection · XSS · Zero-Day Exploit · Brute Force Attack
 │                             · API Abuse
 │
-└── 🏗️  Operational/Infra    Insider Threat · Supply Chain Attack · Cloud Misconfiguration
+└── Operational/Infra    Insider Threat · Supply Chain Attack · Cloud Misconfiguration
                               · Physical Security Breach · Advanced Persistent Threat
 ```
 
@@ -308,11 +308,11 @@ Estimated global defense spending mapped to all 25 threats. **Grand total: $161.
 
 | Category | Total Spending | Top Threat in Category |
 |----------|---------------|----------------------|
-| 🏗️ Operational/Infra | **$53.9B** | APT — $18.0B |
-| 🦠 Malware | **$40.7B** | Ransomware — $20.0B |
-| 💻 Application Attacks | **$29.0B** | Zero-Day Exploit — $12.0B |
-| 🎭 Social Engineering | **$24.4B** | Phishing — $9.8B |
-| 🌐 Network Attacks | **$13.7B** | DDoS Attack — $4.5B |
+| Operational/Infra | **$53.9B** | APT — $18.0B |
+| Malware | **$40.7B** | Ransomware — $20.0B |
+| Application Attacks | **$29.0B** | Zero-Day Exploit — $12.0B |
+| Social Engineering | **$24.4B** | Phishing — $9.8B |
+| Network Attacks | **$13.7B** | DDoS Attack — $4.5B |
 
 **Top 5 threats by individual spending:**
 
