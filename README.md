@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔐 Information Security Threats
+# Information Security Threats
 ### Research Survey & Analysis · 2025
 
 *A fully programmatic, data-driven study of 25 information security threats —  
@@ -8,11 +8,7 @@ scored, ranked, visualized, and documented across six professional output format
 
 ---
 
-[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-22.x-339933?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![matplotlib](https://img.shields.io/badge/matplotlib-3.10-11557c?style=flat-square)](https://matplotlib.org/)
-[![openpyxl](https://img.shields.io/badge/openpyxl-3.1-217346?style=flat-square)](https://openpyxl.readthedocs.io/)
-[![docx.js](https://img.shields.io/badge/docx.js-9.x-2B579A?style=flat-square)](https://docx.js.org/)
+
 
 
 </div>
@@ -68,7 +64,7 @@ npm install -g docx
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 InfoSec/
@@ -93,7 +89,7 @@ InfoSec/
 
 ---
 
-## 📸 Dashboard Previews — All 8 Screens
+## Dashboard Previews — All 8 Screens
 
 > Screenshots of the interactive dashboard (`InfoSec_Dashboard.html`) and generated visualizations. Each image is followed by an explanation of what it shows and why it matters.
 
@@ -227,7 +223,7 @@ The **Full Data Table** presents every scored threat in a single structured view
 
 ---
 
-## 📐 The Risk Model
+## The Risk Model
 
 Every threat in this project is scored using a quantitative model adapted from **NIST SP 800-30 Rev. 1**:
 
@@ -270,7 +266,7 @@ The model rewards low CM% (hard to defend) and high U (high uncertainty). A mode
 
 ---
 
-## 🏆 All 25 Threats — Full Rankings
+## All 25 Threats — Full Rankings
 
 All scores computed from actual parameters. No rounding except to 2 decimal places.
 
@@ -304,7 +300,7 @@ All scores computed from actual parameters. No rounding except to 2 decimal plac
 
 ---
 
-## 🗂️ Threat Categories
+## Threat Categories
 
 Each domain contains exactly **5 threats**, ensuring balanced analytical coverage across all major attack surfaces.
 
@@ -329,7 +325,7 @@ Each domain contains exactly **5 threats**, ensuring balanced analytical coverag
 
 ---
 
-## 💰 Security Spending by Category
+## Security Spending by Category
 
 Estimated global defense spending mapped to all 25 threats. **Grand total: $161.7B.**
 
@@ -353,7 +349,7 @@ Estimated global defense spending mapped to all 25 threats. **Grand total: $161.
 
 ---
 
-## 📈 Attack Trend Analysis 2015–2024
+## Attack Trend Analysis 2015–2024
 
 Tracked across **15 major attack types** over 10 years. Data synthesized from Verizon DBIR (2015–2024), IBM X-Force (2020–2024), ENISA Threat Landscape (2018–2023), and CrowdStrike Global Threat Report (2021–2024).
 
@@ -402,7 +398,7 @@ Data Exposure / Misconfiguration     3%    4%    5%    5%    5%    6%    6%    6
 
 
 
-## 🔍 Key Findings
+## Key Findings
 
 ### 1 · Frequency ≠ Risk
 
@@ -426,7 +422,7 @@ The Operational/Infrastructure category holds 4 of the top 8 risk positions and 
 
 ---
 
-## 📚 References & Sources
+## References & Sources
 
 | # | Source | Used For |
 |---|--------|---------|
@@ -454,7 +450,7 @@ Released for **academic and research use**. Data synthesized from publicly avail
 <div align="center">
 
 
-**Python 3.12 · Node.js 22 · matplotlib 3.10 · numpy 2.4 · openpyxl 3.1 · docx.js 9.x**
+
 
 
 
@@ -462,6 +458,6 @@ Released for **academic and research use**. Data synthesized from publicly avail
 
 ---
 
-## Creator
+## Developer
 
 **Ritesh Pandey**
