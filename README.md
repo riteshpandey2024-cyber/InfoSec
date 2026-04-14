@@ -1,7 +1,7 @@
 <div align="center">
 
 # Information Security Threats
-### Research Survey & Analysis · 2025
+### Research Survey & Analysis 
 
 *A fully programmatic, data-driven study of 25 information security threats —  
 scored, ranked, visualized, and documented across six professional output formats.*
