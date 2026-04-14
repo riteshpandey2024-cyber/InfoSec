@@ -45,7 +45,6 @@ npm install -g docx
 ```
 InfoSec/
 │
-
 ├── assets/                       
 │   ├── overview.png
 │   ├── risk_ranking.png
