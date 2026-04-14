@@ -56,10 +56,12 @@ InfoSec/
 │   ├── defense_heatmap.png
 │   └── full_data_table.png
 │
-├── InfoSec_Report.pdf              # Final 9-page report with all charts embedded
+├── InfoSec_Report.pdf              # Final 13-page report with all charts embedded
 ├── InfoSec_Dataset.xlsx            # Raw dataset · 5 sheets · 18 KB
 ├── InfoSec_Dashboard.html          # Interactive browser dashboard · no server needed
-
+├── InfoSec.css                     # Interactive style
+├── InfoSec_.js                     # Interactive script concept
+├── Problem_Statement.pdf           # Problem_Statement 
 └── README.md
 ```
 
