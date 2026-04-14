@@ -21,31 +21,7 @@ This project generates a **complete, publication-ready information security rese
 
 
 
-## Table of Contents
 
-- [Quick Start](#-quick-start)
-- [Project Structure](#-project-structure)
-- [Dashboard Previews — All 8 Screens](#-dashboard-previews--all-8-screens)
-  - [1 · Overview](#1--overview)
-  - [2 · Risk Ranking](#2--risk-ranking)
-  - [3 · Attack Trends](#3--attack-trends)
-  - [4 · Distribution](#4--distribution)
-  - [5 · Risk vs Spending](#5--risk-vs-spending)
-  - [6 · Stacked Trends](#6--stacked-trends)
-  - [7 · Defense Heatmap](#7--defense-heatmap)
-  - [8 · Full Data Table](#8--full-data-table)
-- [The Risk Model](#-the-risk-model)
-- [All 25 Threats — Full Rankings](#-all-25-threats--full-rankings)
-- [Threat Categories](#-threat-categories)
-- [Security Spending by Category](#-security-spending-by-category)
-- [Attack Trend Analysis 2015–2024](#-attack-trend-analysis-20152024)
-- [Defense Mechanism Analysis](#-defense-mechanism-analysis)
-
-- [Key Findings](#-key-findings)
-- [References & Sources](#-references--sources)
-- [License](#license)
-- [Creator](#creator)
----
 
 ## ⚡ Quick Start
 
