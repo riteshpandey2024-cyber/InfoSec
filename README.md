@@ -158,6 +158,7 @@ The **Risk vs Spending** scatter plot maps each of the 25 threats on two axes: c
   <img src="assets/stacked_trends.png" width="800">
 </p>
 <br>   
+
 <p align="center">
   <img src="assets/stacked_trend1.png" width="800"> 
 </p>
