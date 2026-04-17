@@ -68,7 +68,7 @@ InfoSec/
 
 ## Dashboard Previews — All 8 Screens
 
-> Screenshots of the interactive dashboard (`InfoSec_Dashboard.html`) and generated visualizations. Each image is followed by an explanation of what it shows and why it matters.
+> Screenshots of the interactive dashboard (`InfoSec_Dashboard.html`) and generated visualisations. Each image is followed by an explanation of what it shows and why it matters.
 
 ---
 
@@ -87,7 +87,7 @@ InfoSec/
 </p>
 <br>  
 
-The **Overview** screen is the entry point to the dashboard — a summary panel that simultaneously shows the four most important visualizations: Risk Ranking, Attack Trends, 2024 Distribution, and the Risk vs Spending scatter. At a glance, a reader can see which threats score Critical, how the incident landscape has shifted across a decade, what share of 2024 attacks comes from each category, and whether spending aligns with risk. This panel is designed to work as a self-contained project poster — every key conclusion is visible without navigating to another screen.
+The **Overview** screen is the entry point to the dashboard — a summary panel that simultaneously shows the four most important visualisations: Risk Ranking, Attack Trends, 2024 Distribution, and the Risk vs Spending scatter. At a glance, a reader can see which threats score Critical, how the incident landscape has shifted across a decade, what share of 2024 attacks comes from each category, and whether spending aligns with risk. This panel is designed to work as a self-contained project poster — every key conclusion is visible without navigating to another screen.
 
 ---
 
@@ -102,7 +102,7 @@ The **Overview** screen is the entry point to the dashboard — a summary panel 
 </p>
 <br>  
 
-The **Risk Ranking** chart is a horizontal bar chart that ranks all 25 identified threats from highest to lowest computed risk score. Bars are color-coded by severity tier: dark red (Critical ≥55), red-orange (High 45–54), orange (Medium-High 35–44), amber (Medium 25–34), and green (Lower <25). Score labels are printed to the right of each bar. The chart makes two things immediately visible: first, only one threat — Zero-Day Exploit at 58.0 — reaches the Critical tier, revealing a meaningful separation between it and the pack; second, the top four threats (Zero-Day, APT, Spear Phishing, Supply Chain) all score above 51 and share the trait of very low control mitigation percentages (20–40%), meaning current industry defenses have limited effectiveness against them. This inversion — where less frequent threats outrank more frequent ones — is the model's core insight and is explained further in the section.
+The **Risk Ranking** chart is a horizontal bar chart that ranks all 25 identified threats from highest to lowest, based on computed risk scores. Bars are colour-coded by severity tier: dark red (Critical ≥55), red-orange (High 45–54), orange (Medium-High 35–44), amber (Medium 25–34), and green (Lower <25). Score labels are printed to the right of each bar. The chart makes two things immediately visible: first, only one threat — Zero-Day Exploit at 58.0 — reaches the Critical tier, revealing a meaningful separation between it and the pack; second, the top four threats (Zero-Day, APT, Spear Phishing, Supply Chain) all score above 51 and share the trait of very low control mitigation percentages (20–40%), meaning current industry defenses have limited effectiveness against them. This inversion — where less frequent threats outrank more frequent ones — is the model's core insight and is explained further in the section.
 
 ---
 
@@ -117,7 +117,7 @@ The **Risk Ranking** chart is a horizontal bar chart that ranks all 25 identifie
 </p>
 <br>  
 
-The **Attack Trends** line graph tracks the percentage of all reported incidents attributed to 15 major attack categories every year from 2015 to 2024. Four high-growth categories — Phishing/Social Engineering, Ransomware, Supply Chain Attacks, and Cloud Security Incidents — are rendered as solid bold lines; the remaining 11 appear as lighter dashed series. The most striking patterns are: Phishing growing from 22% to a sustained 34–36% peak, making it the single dominant category for six consecutive years; Ransomware surging from 4% in 2015 to 14% in 2021 before a modest decline; and both Supply Chain and Cloud Incidents rising from 1% to 7–8% — the steepest proportional growth trajectories of any category. Meanwhile, conventional Malware (excl. Ransomware) falls steadily from 18% to 7%, reflecting a rational shift by the attacker community toward higher-return tactics rather than any improvement in defenses.
+The **Attack Trends** line graph tracks the percentage of all reported incidents attributed to 15 major attack categories every year from 2015 to 2024. Four high-growth categories — Phishing/Social Engineering, Ransomware, Supply Chain Attacks, and Cloud Security Incidents — are rendered as solid bold lines; the remaining 11 appear as lighter dashed series. The most striking patterns are: Phishing growing from 22% to a sustained 34–36% peak, making it the single dominant category for six consecutive years; Ransomware surging from 4% in 2015 to 14% in 2021 before a modest decline; and both Supply Chain and Cloud Incidents rising from 1% to 7–8% — the steepest proportional growth trajectories of any category. Meanwhile, conventional Malware (excluding ransomware) falls steadily from 18% to 7%, reflecting a rational shift by the attacker community toward higher-return tactics rather than any improvement in defences.
 
 ---
 
@@ -132,7 +132,7 @@ The **Attack Trends** line graph tracks the percentage of all reported incidents
 </p>
 <br>   
 
-The **Distribution** doughnut chart shows the exact percentage share of all reported cybersecurity incidents attributed to each attack category in 2024. The dominant finding is that just three categories — Phishing/Social Engineering (34%), Ransomware (11%), and general Malware (7%) — account for 52% of all incidents, meaning a focused effort on these three vectors would address more than half of all attack volume. However, the chart also makes visible the strategic risk of treating small slices as unimportant: APT and Zero-Day Exploits represent only ~5% of incident share each, yet they occupy the top two risk ranking positions and command $18B and $12B in annual defensive spending. Frequency and impact are not the same metric — the pie chart visualizes this gap directly.
+The **Distribution** doughnut chart shows the exact percentage share of all reported cybersecurity incidents attributed to each attack category in 2024. The dominant finding is that just three categories — Phishing/Social Engineering (34%), Ransomware (11%), and general Malware (7%) — account for 52% of all incidents, meaning a focused effort on these three vectors would address more than half of all attack volume. However, the chart also makes visible the strategic risk of treating small slices as unimportant: APT and Zero-Day Exploits represent only ~5% of incident share each, yet they occupy the top two risk ranking positions and command $18B and $12B in annual defensive spending. Frequency and impact are not the same metric — the pie chart visualises this gap directly.
 
 ---
 
@@ -148,7 +148,7 @@ The **Distribution** doughnut chart shows the exact percentage share of all repo
 <br>  
 
 
-The **Risk vs Spending** scatter plot maps each of the 25 threats on two axes: computed risk score (x-axis) and estimated global security spending in billions USD (y-axis). Each point is colored by threat category and every threat is individually labeled. A first-degree polynomial trendline confirms the expected positive correlation: higher-risk threats generally attract larger defensive investment. The most analytically interesting points are the outliers that deviate from the trend. Ransomware sits far above the trendline ($20B spending at a risk score of 49.8) because its operational disruption impact — shutting down fuel pipelines and hospital systems — drives emergency spending beyond what the composite risk score captures. APT and Supply Chain Attack both cluster in the upper-right quadrant, confirming that the highest-risk threats also receive the highest sustained investment.
+The **Risk vs Spending** scatter plot maps each of the 25 threats on two axes: computed risk score (x-axis) and estimated global security spending in billions USD (y-axis). Each point is colored by threat category, and every threat is individually labelled. A first-degree polynomial trendline confirms the expected positive correlation: higher-risk threats generally attract larger defensive investment. The most analytically interesting points are the outliers that deviate from the trend. Ransomware sits far above the trendline ($20B spending at a risk score of 49.8) because its operational disruption impact — shutting down fuel pipelines and hospital systems — drives emergency spending beyond what the composite risk score captures. APT and Supply Chain Attack both cluster in the upper-right quadrant, confirming that the highest-risk threats also receive the highest sustained investment.
 
 ---
 
@@ -164,7 +164,7 @@ The **Risk vs Spending** scatter plot maps each of the 25 threats on two axes: c
 <br>   
 
 
-The **Stacked Trends** chart visualizes the same 10-year, 15-category data as the line graph but presents it as stacked annual bars, making compositional shifts — rather than individual trajectories — the focal point. Each bar represents the full tracked incident share for that year, with segments showing each category's contribution. The transformation from the 2015 bar (dominated by a large Malware segment) to the 2024 bar (dominated by the Phishing segment with visible new slices for Supply Chain and Cloud) tells the decade's security story in a single visual. Security architects and CISO teams should interpret this chart as an instruction to rebalance control portfolios: defenses designed for mass-malware environments must be supplemented with controls designed for the 2024 composition — email security, supply chain governance, and cloud posture management.
+The **Stacked Trends** chart visualises the same 10-year, 15-category data as the line graph but presents it as stacked annual bars, making compositional shifts — rather than individual trajectories — the focal point. Each bar represents the full tracked incident share for that year, with segments showing each category's contribution. The transformation from the 2015 bar (dominated by a large Malware segment) to the 2024 bar (dominated by the Phishing segment with visible new slices for Supply Chain and Cloud) tells the decade's security story in a single visual. Security architects and CISO teams should interpret this chart as an instruction to rebalance control portfolios: defenses designed for mass-malware environments must be supplemented with controls designed for the 2024 composition — email security, supply chain governance, and cloud posture management.
 
 ---
 
@@ -180,7 +180,7 @@ The **Stacked Trends** chart visualizes the same 10-year, 15-category data as th
 <br> 
 
 
-The **Defense Heatmap** is a 25×12 matrix that maps every ranked threat (rows, ordered by risk score from highest at top) against 12 primary defense mechanisms (columns). Cell values are scored 0–4: None, Low, Medium, High, and Very High effectiveness. The most important structural observation is that the top rows — Zero-Day Exploit, APT, Supply Chain Attack — are dominated by low-effectiveness cells, confirming that current defenses are weakest against the highest-risk threats. Conversely, SIEM/Monitoring and Zero-Trust Architecture are the two most consistently effective columns, averaging 2.84/4.0 and 2.64/4.0 respectively — the only controls that provide at least Medium protection across virtually every threat category. Specialist controls like API Security and Vendor Risk Management score low overall but are essential for their specific threat vectors. The heatmap operationalizes the defense-in-depth principle: no single column is uniformly green, so no single investment is sufficient.
+The **Defence Heatmap** is a 25×12 matrix that maps every ranked threat (rows, ordered by risk score from highest at top) against 12 primary defence mechanisms (columns). Cell values are scored 0–4: None, Low, Medium, High, and Very High effectiveness. The most important structural observation is that the top rows — Zero-Day Exploit, APT, Supply Chain Attack — are dominated by low-effectiveness cells, confirming that current defences are weakest against the highest-risk threats. Conversely, SIEM/Monitoring and Zero-Trust Architecture are the two most consistently effective columns, averaging 2.84/4.0 and 2.64/4.0, respectively — the only controls that provide at least Medium protection across virtually every threat category. Specialist controls like API Security and Vendor Risk Management score low overall but are essential for their specific threat vectors. The heatmap operationalises the defence-in-depth principle: no single column is uniformly green, so no single investment is sufficient.
 
 ---
 
@@ -196,7 +196,7 @@ The **Defense Heatmap** is a 25×12 matrix that maps every ranked threat (rows, 
 <br>   
 
 
-The **Full Data Table** presents every scored threat in a single structured view, showing all six risk model parameters — Likelihood (L), Asset Value (V), Control Mitigation % (CM), Uncertainty (U), computed Risk Score, and Risk Level — for all 25 threats in ranked order. Each row is color-coded by risk tier in the Level column, and the Score column uses the tier color for the numeric value to make severity immediately readable. The table is the raw data layer beneath all six visualizations — every bar height, pie slice, scatter point, and heatmap row ultimately derives from the parameters visible here. Readers who want to verify or challenge a ranking can do so directly from this table using the formula shown in the header: `Risk Score = (L × V × (1 − CM%)) + U`. The full dataset in machine-readable form is also available in `ranked_data.json` and in Sheet 2 of `InfoSec_Threats_Dataset.xlsx`.
+The **Full Data Table** presents every scored threat in a single structured view, showing all six risk model parameters — Likelihood (L), Asset Value (V), Control Mitigation % (CM), Uncertainty (U), computed Risk Score, and Risk Level — for all 25 threats in ranked order. Each row is colour-coded by risk tier in the Level column, and the Score column uses the tier colour for the numeric value to make severity immediately readable. The table is the raw data layer beneath all six visualisations — every bar height, pie slice, scatter point, and heatmap row ultimately derives from the parameters visible here. Readers who want to verify or challenge a ranking can do so directly from this table using the formula shown in the header: `Risk Score = (L × V × (1 − CM%)) + U`. The full dataset in machine-readable form is also available in `ranked_data.json` and in Sheet 2 of `InfoSec_Threats_Dataset.xlsx`.
 
 ---
 
@@ -298,13 +298,13 @@ Each domain contains exactly **5 threats**, ensuring balanced analytical coverag
                               · Physical Security Breach · Advanced Persistent Threat
 ```
 
-**Operational/Infrastructure threats dominate the upper rankings** — 4 of the top 8 positions (APT #2, Supply Chain #4, Cloud Misconfiguration #7, Insider Threat #8). This reflects a paradigm shift from external technical exploits toward systemic, ecosystem-level vulnerabilities where **organizational trust relationships** are the attack surface.
+**Operational/Infrastructure threats dominate the upper rankings** — 4 of the top 8 positions (APT #2, Supply Chain #4, Cloud Misconfiguration #7, Insider Threat #8). This reflects a paradigm shift from external technical exploits toward systemic, ecosystem-level vulnerabilities where **organisational trust relationships** are the attack surface.
 
 ---
 
 ## Security Spending by Category
 
-Estimated global defense spending mapped to all 25 threats. **Grand total: $161.7B.**
+Estimated global defence spending mapped to all 25 threats. **Grand total: $161.7B.**
 
 | Category | Total Spending | Top Threat in Category |
 |----------|---------------|----------------------|
@@ -316,7 +316,7 @@ Estimated global defense spending mapped to all 25 threats. **Grand total: $161.
 
 **Top 5 threats by individual spending:**
 
-| Threat | Est. Spending | Primary Defense Stack |
+| Threat | Est. Spending | Primary Defence Stack |
 |--------|-------------|----------------------|
 | Ransomware | **$20.0B** | Immutable backups · EDR/XDR · network segmentation · IR retainer |
 | APT | **$18.0B** | Threat intel · Zero Trust · NDR · EDR/XDR · threat hunting · deception tech |
@@ -328,7 +328,7 @@ Estimated global defense spending mapped to all 25 threats. **Grand total: $161.
 
 ## Attack Trend Analysis 2015–2024
 
-Tracked across **15 major attack types** over 10 years. Data synthesized from Verizon DBIR (2015–2024), IBM X-Force (2020–2024), ENISA Threat Landscape (2018–2023), and CrowdStrike Global Threat Report (2021–2024).
+Tracked across **15 major attack types** over 10 years. Data synthesised from Verizon DBIR (2015–2024), IBM X-Force (2020–2024), ENISA Threat Landscape (2018–2023), and CrowdStrike Global Threat Report (2021–2024).
 
 ### Fastest Growing (2015 → 2024)
 
@@ -379,23 +379,23 @@ Data Exposure / Misconfiguration     3%    4%    5%    5%    5%    6%    6%    6
 
 ### 1 · Frequency ≠ Risk
 
-Phishing (L=9, ~34% of all incidents, rank #6) scores 46.6. Zero-Day Exploit (L=6, ~5% of incidents, rank #1) scores 58.0. The difference is entirely in the CM% term: Phishing defenses have matured to 45% effectiveness, while Zero-Day defenses sit at only 20%. Organizations that allocate security budgets by incident count alone systematically underfund their hardest-to-stop exposures.
+Phishing (L=9, ~34% of all incidents, rank #6) scores 46.6. Zero-Day Exploit (L=6, ~5% of incidents, rank #1) scores 58.0. The difference is entirely in the CM% term: Phishing defences have matured to 45% effectiveness, while Zero-Day defences sit at only 20%. Organisations that allocate security budgets by incident count alone systematically underfund their hardest-to-stop exposures.
 
 ### 2 · SIEM + Zero Trust Are the Only Universally Effective Controls
 
-Heatmap analysis shows SIEM/Monitoring (2.84/4.0) and Zero Trust Architecture (2.64/4.0) are the only mechanisms providing at least Medium effectiveness across virtually every threat category. No single control achieves Very High effectiveness against APT, Zero-Day, or Supply Chain attacks. Defense-in-depth is not a preference — it is a structural necessity.
+Heatmap analysis shows SIEM/Monitoring (2.84/4.0) and Zero Trust Architecture (2.64/4.0) are the only mechanisms providing at least Medium effectiveness across virtually every threat category. No single control achieves Very High effectiveness against APT, Zero-Day, or Supply Chain attacks. Defence-in-depth is not a preference — it is a structural necessity.
 
 ### 3 · Cloud and Supply Chain Define the Decade's Structural Shift
 
-Supply Chain Attacks grew +600% (1% → 7%) and Cloud Security Incidents grew +700% (1% → 8%) between 2015 and 2024. Both exploit the same root cause: implicit trust in third-party relationships. The enterprise perimeter has dissolved — the attack surface is now the entire ecosystem of vendors, platforms, and configurations an organization depends on.
+Supply Chain Attacks grew +600% (1% → 7%), and Cloud Security Incidents grew +700% (1% → 8%) between 2015 and 2024. Both exploit the same root cause: implicit trust in third-party relationships. The enterprise perimeter has dissolved — the attack surface is now the entire ecosystem of vendors, platforms, and configurations an organisation depends on.
 
 ### 4 · General Malware Declined As Attacker ROI Shifted
 
-Non-ransomware malware fell from 18% to 7% of incidents (−61%). Attackers rationalized their toolkits: ransomware, supply chain infiltration, and targeted social engineering offer dramatically higher returns per campaign. The data reflects a maturation of the cybercrime economy, not a weakening of it.
+Non-ransomware malware fell from 18% to 7% of incidents (−61%). Attackers rationalised their toolkits: ransomware, supply chain infiltration, and targeted social engineering offer dramatically higher returns per campaign. The data reflects a maturation of the cybercrime economy, not a weakening of it.
 
 ### 5 · Operational/Infrastructure Dominates Both Rankings and Spending
 
-The Operational/Infrastructure category holds 4 of the top 8 risk positions and accounts for $53.9B — the largest per-category spending total. It contains the two threats with the lowest average defense coverage (Supply Chain: 1.42/4.0) and the highest uncertainty scores (APT and Zero-Day, U=9–10). The risk model and the market arrive at the same conclusion: systemic, ecosystem-level threats are the hardest and most expensive problems in the field.
+The Operational/Infrastructure category holds 4 of the top 8 risk positions and accounts for $53.9B — the largest per-category spending total. It contains the two threats with the lowest average defence coverage (Supply Chain: 1.42/4.0) and the highest uncertainty scores (APT and Zero-Day, U=9–10). The risk model and the market arrive at the same conclusion: systemic, ecosystem-level threats are the hardest and most expensive problems in the field.
 
 ---
 
@@ -420,7 +420,7 @@ The Operational/Infrastructure category holds 4 of the top 8 risk positions and 
 
 ## License
 
-Released for **academic and research use**. Data synthesized from publicly available industry reports. All referenced report titles, frameworks, and trademarks remain the property of their respective owners.
+Released for **academic and research use**. Data synthesised from publicly available industry reports. All referenced report titles, frameworks, and trademarks remain the property of their respective owners.
 
 
 
